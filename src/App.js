@@ -1,26 +1,70 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState} from 'react';
 import './App.css';
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  Badge
 
-function App() {
+} from 'reactstrap';
+
+import Routes from './routes'
+
+
+export default function App( {history} ) {
+
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => setIsOpen(!isOpen);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    
+    <div className="app">
+      <header>
+      <nav>
+        <Navbar color="light" light="md">
+          <NavbarBrand href="/">Instautomated!</NavbarBrand>
+          
+          <NavbarToggler onClick={toggle} />
+          <Collapse isOpen={isOpen} navbar>
+            <Nav className="mr-auto" navbar>
+            <NavItem>
+                <NavLink href="/tools">Tools</NavLink>
+              </NavItem>
 
-export default App;
+              <NavItem>
+                <NavLink href="/register">Register</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/login">Login</NavLink>
+            </NavItem>
+
+            </Nav>
+
+
+          </Collapse>
+        </Navbar>
+      </nav>
+      </header>
+
+      <main>
+
+        <Routes />
+
+      </main>
+
+      <footer>
+      <Badge color="secondary" pill>Created by Rodrigo Onetto</Badge> 
+      </footer>
+
+      
+    </div>
+    
+
+  )
+}

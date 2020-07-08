@@ -62,6 +62,19 @@ main h6{
 }
 
 
+
+#navrow{
+
+  flex-direction: row;
+
+}
+
+#navbutt{
+  
+  margin-right: 10px;
+}
+
+
 .app footer{
   display: flex;
   justify-content: center;

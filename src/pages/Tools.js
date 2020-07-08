@@ -8,7 +8,7 @@ export default function Tools() {
 
 
   const [generated, setGenerated] = useState(false)
-  const unFollowCodeArea = useRef(null);
+  const CodeArea = useRef(null);
   const [usersLimit, setUsersLimit] = useState('')
   const [delayInSecondsUnFollow, setDelayInSecondsUnFollow] = useState('')
   const [startingFrom, setStartingFrom] = useState('')

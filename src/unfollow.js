@@ -1,6 +1,6 @@
-let delayInSecondsUnFollow = 120;
-let startingFrom = 600;
-let unfollowlimit = 200;
+let delayInSecondsUnFollow = 50;
+let startingFrom = 20;
+let unfollowlimit = 2;
 let unfollowStop = startingFrom+unfollowlimit;
 let scrollIndex = 0;
 let index = startingFrom;
@@ -8,6 +8,9 @@ let scroll = 0 ;
 let unFollowedList = [];
 let user = '';
 let whiteList = [];
+
+let unFollowProcess
+let scrollingProcess
 
 console.clear();
 
@@ -28,8 +31,8 @@ function firstScroll() {
         console.clear();
         clearInterval(firstScrollingProcess);
         console.log(`Finalizada la localizacion del primer usuario a unfollowear, comienza proceso`);
-        let unFollowProcess = setInterval(unfollowea, (delayInSecondsUnFollow * 1000));
-        let scrollingProcess = setInterval(scrollea, (delayInSecondsUnFollow * 5 * 1000));  
+        unFollowProcess = setInterval(unfollowea, (delayInSecondsUnFollow * 1000));
+        scrollingProcess = setInterval(scrollea, (delayInSecondsUnFollow * 5 * 1000));  
     }
 }
 

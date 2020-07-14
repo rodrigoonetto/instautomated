@@ -1,13 +1,7 @@
 import React, { useState} from 'react';
 import './App.css';
 import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
+  
   Badge
 
 } from 'reactstrap';
@@ -30,10 +24,6 @@ export default function App( ) {
       <Routes />
 
       
-
-      <footer>
-      <Badge color="secondary" pill>Created by Rodrigo Onetto</Badge> 
-      </footer>
 
       
     </div>

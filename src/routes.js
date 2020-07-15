@@ -8,7 +8,7 @@ import TopNav from './components/TopNav'
 import BottomFooter from './components/BottomFooter'
 import Settings from './pages/Settings'
 import Welcome from './pages/Welcome'
-import ExceptionsList from './pages/ExceptionsList'
+
 
 
 
@@ -23,7 +23,7 @@ export default function Routes() {
                 <Route path='/register' exact component={Register} />
                 <Route path='/settings' exact component={Settings} />
                 <Route path='/welcome' exact component={Welcome} />
-                <Route path='/exceptions' exact component={ExceptionsList} />
+
 
             </Switch>
             <BottomFooter />

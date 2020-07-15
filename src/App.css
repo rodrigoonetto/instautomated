@@ -225,7 +225,7 @@ main h6{
   .homebanner {
     background-repeat-y: no-repeat;
     padding: 10px 20px;
-    margin: 40px 20px;
+    margin: 40px 0px;
     background-position-x: 700px;
     background-position-y: -5px;
     border-radius: 10px;
@@ -233,7 +233,6 @@ main h6{
   }
   .mobile footer{
     font-size: x-small;
-
     border-top: 1px #FFF solid;
     display: flex;
     justify-content: center;

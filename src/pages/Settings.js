@@ -23,6 +23,7 @@ export default function Settings({ history }) {
     const [modal, setModal] = useState(false);
     const [passwordEditEnabled, setPasswordEditEnabled] = useState(false)
     const [userExceptions, setUserExceptions] = useState([])
+    const [usertoAddInput,setusertoAddInput] = useState('')
     const toggle = () => setModal(!modal);
 
     useEffect(() => {
@@ -45,7 +46,7 @@ export default function Settings({ history }) {
             console.log(error)
         }
     }
-    console.log(userExceptions)
+
     const modifyUserData = async (origin) => {
         try {
             const userResponse = await api.post(`/user/modify/${localStorage.getItem('user_id')}`, { firstName, instagram, password, usersLimit, delayInSeconds, startingFrom })
@@ -69,6 +70,36 @@ export default function Settings({ history }) {
             console.log(error)
         }
     }
+
+    const exceptionDeleteHandler = async (usertoDelete) => {
+        try {
+            await api.post(`/user/deleteexception/${localStorage.getItem('user_id')}`, { usertoDelete })
+                console.log(usertoDelete)
+                console.log("USUARIO ELIMINADO CON EXITO")
+
+            } 
+
+         catch (error) {
+            console.log(error)
+        }
+
+    }
+
+    const exceptionAddHandler = async (usertoAdd) => {
+        try {
+            await api.post(`/user/addexception/${localStorage.getItem('user_id')}`, { usertoAdd })
+                console.log(usertoAdd)
+                console.log("USUARIO AGREGADO CON EXITO")
+
+            } 
+
+         catch (error) {
+            console.log(error)
+        }
+
+    }
+        
+    
 
 
 
@@ -178,7 +209,7 @@ export default function Settings({ history }) {
                                         <tr key={userException.user}>
                                             <td>{userException.user}</td>
                                             <td>{moment(userException.date).format('L')}</td>
-                                            <td>{moment(1594819630497).format('L')}</td>
+                                            <td><Button size="sm" outline color="danger" className="secondary-btn" onClick={()=>exceptionDeleteHandler(userException.user)}>Delete</Button></td>
                                         </tr>
                                     ))}  
                                 </tbody>
@@ -190,15 +221,15 @@ export default function Settings({ history }) {
 
 
 
-                        <InputGroup className="input-group" id="exceptionsinput">
+                        <InputGroup className="input-group" id="exceptionsinput" onChange={evt => setusertoAddInput(evt.target.value)}>
                             <Input />
                             <InputGroupAddon addonType="append">
-                                <Button color="dark"><PersonAddIcon fontSize="small" />  Add</Button>
+                                <Button color="dark"><PersonAddIcon fontSize="small" onClick={() => exceptionAddHandler(usertoAddInput)}/>  Add</Button>
                             </InputGroupAddon>
                         </InputGroup>
                     </ModalBody>
                     <ModalFooter>
-                        <Button color="secondary" onClick={toggle}>Save</Button>{' '}
+                        <Button color="secondary" onClick={toggle}>Done</Button>{' '}
                         <Button color="danger" onClick={toggle}>Cancel</Button>
                     </ModalFooter>
                 </Modal>

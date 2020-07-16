@@ -2,16 +2,12 @@ Instautomated! is an app to help with automatic follows and unfollows on Instagr
 
 It was developed using the following stack:
 
-Frontend
-React - React-strap - React-router.
+Frontend: [React - React-strap - React-router]
 
-Backend
-Node.Js - Express - Mongoose -  Bcrypt - Axios
+Backend: [Node.Js - Express - Mongoose -  Bcrypt - Axios]
 
-DB
-MongoDB
+DB: [MongoDB]
 
-Automation Scripts
-Vanilla Javascript
+Automation Scripts: [Vanilla Javascript]
 
 

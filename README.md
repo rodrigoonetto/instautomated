@@ -11,4 +11,7 @@ Node.Js - Express - Mongoose -  Bcrypt - Axios
 DB
 MongoDB
 
+Automation Scripts
+Vanilla Javascript
+
 

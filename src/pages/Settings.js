@@ -23,7 +23,8 @@ export default function Settings({ history }) {
     const [modal, setModal] = useState(false);
     const [passwordEditEnabled, setPasswordEditEnabled] = useState(false)
     const [userExceptions, setUserExceptions] = useState([])
-    const [usertoAddInput,setusertoAddInput] = useState('')
+    const [usertoAddInput,setUsertoAddInput] = useState('')
+    
     const toggle = () => setModal(!modal);
 
     useEffect(() => {
@@ -76,6 +77,7 @@ export default function Settings({ history }) {
             await api.post(`/user/deleteexception/${localStorage.getItem('user_id')}`, { usertoDelete })
                 console.log(usertoDelete)
                 console.log("USUARIO ELIMINADO CON EXITO")
+                getUserData()
 
             } 
 
@@ -90,6 +92,7 @@ export default function Settings({ history }) {
             await api.post(`/user/addexception/${localStorage.getItem('user_id')}`, { usertoAdd })
                 console.log(usertoAdd)
                 console.log("USUARIO AGREGADO CON EXITO")
+                getUserData()
 
             } 
 
@@ -221,12 +224,11 @@ export default function Settings({ history }) {
 
 
 
-                        <InputGroup className="input-group" id="exceptionsinput" onChange={evt => setusertoAddInput(evt.target.value)}>
-                            <Input />
-                            <InputGroupAddon addonType="append">
-                                <Button color="dark"><PersonAddIcon fontSize="small" onClick={() => exceptionAddHandler(usertoAddInput)}/>  Add</Button>
-                            </InputGroupAddon>
-                        </InputGroup>
+                        <FormGroup className="input-group" id="exceptionsinput">
+                        <Input onChange={evt => setUsertoAddInput(evt.target.value)}/>
+                        <Button color="dark" onClick={() => exceptionAddHandler(usertoAddInput)}><PersonAddIcon fontSize="small"/>  Add</Button>
+                        </FormGroup>
+                            
                     </ModalBody>
                     <ModalFooter>
                         <Button color="secondary" onClick={toggle}>Done</Button>{' '}

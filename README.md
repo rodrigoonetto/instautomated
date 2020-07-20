@@ -5,10 +5,10 @@
 ##### Fullstack development proyect designed, developed, tested and deployed from scratch.
 
 ###### Features:
--Script generator tool to automatize the following/unfollowing process on Instagram.
--Human actions simulation to avoid Instagram spam/bot bans.
--Fully parametrizable automation scrips: Delay between actions, uses to process limit, users to star from, user exceptions list.
--Profile with parameters/settings saved in DB for a quick script generation.
+- Script generator tool to automatize the following/unfollowing process on Instagram.
+- Human actions simulation to avoid Instagram spam/bot bans.
+- Fully parametrizable automation scrips: Delay between actions, uses to process limit, users to star from, user exceptions list.
+- Profile with parameters/settings saved in DB for a quick script generation.
 
 ###### Development Stack:
 

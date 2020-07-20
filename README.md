@@ -1,23 +1,23 @@
 # Instautomated! is a web-app to help with automatic follows and unfollows on Instagram.
 
-##It´s already deployed and fully working: [Instautomation!](https://instautomated.herokuapp.com/)
+## It´s already deployed and fully working: [Instautomation!](https://instautomated.herokuapp.com/)
 
-Fullstack development proyect designed, developed, tested and deployed from scratch.
+### Fullstack development proyect designed, developed, tested and deployed from scratch.
 
-######Features:
+###### Features:
 -Script generator tool to automatize the following/unfollowing process on Instagram.
 -Human actions simulation to avoid Instagram spam/bot bans.
 -Fully parametrizable automation scrips: Delay between actions, uses to process limit, users to star from, user exceptions list.
 -Profile with parameters/settings saved in DB for a quick script generation.
 
-######Development Stack:
+###### Development Stack:
 
 -**Frontend:** React - React-strap - React-router.
 -**Backend:** Node.js - Express - Mongoose -  Bcrypt - Axios.
 -**DB:** MongoDB.
 -**Automation Scripts:** Vanilla Javascript.
 
-######Development Tools/Techniques:
+###### Development Tools/Techniques:
 
 -**Coding:** Visual Studio Code.
 -**API tests:** Insomnia.
@@ -26,13 +26,13 @@ Fullstack development proyect designed, developed, tested and deployed from scra
 -**Graphic design**: Adobe Photoshop/Illustrator.
 -**CI/CD:** Configuration of automatic deployment from Visual Studio Code to GitHub and Heroku.
 
-######Modules:
+###### Modules:
 -User registration.
 -User login.
 -User settings.
 -Script generator.
 
-######API endpoints:
+###### API endpoints:
 baseURL: https://instautomated-api.herokuapp.com
 **GET /test:** Status.
 **POST /login:** Login.

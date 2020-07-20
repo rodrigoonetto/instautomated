@@ -1,8 +1,8 @@
 # Instautomated! is a web-app to help with automatic follows and unfollows on Instagram.
 
-##### It´s already deployed and fully working: [Instautomation!](https://instautomated.herokuapp.com/)
+#### It´s already deployed and fully working: [Instautomation!](https://instautomated.herokuapp.com/)
 
-#### Fullstack development proyect designed, developed, tested and deployed from scratch.
+##### Fullstack development proyect designed, developed, tested and deployed from scratch.
 
 ###### Features:
 -Script generator tool to automatize the following/unfollowing process on Instagram.
@@ -33,7 +33,7 @@
 - Script generator.
 
 ###### API endpoints:
-baseURL: https://instautomated-api.herokuapp.com
+- baseURL: https://instautomated-api.herokuapp.com
 - **GET /test:** Status.
 - **POST /login:** Login.
 - **POST /user/register:** Register.
